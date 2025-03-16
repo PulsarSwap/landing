@@ -7,19 +7,25 @@ import { PartnersSection } from "./sections/PartnersSection";
 import { SaveCostSection } from "./sections/SaveCostSection";
 import { SecurityAuditsSection } from "./sections/SecurityAuditsSection";
 
-export const DesktopLightMode = (): JSX.Element => {
+export const WebsiteLightMode = (): JSX.Element => {
   return (
     <div className="bg-white flex flex-row justify-center w-full">
-      <div className="bg-white w-full max-w-[1425px]">
+      <div className="bg-white w-full">
         <div className="bg-white">
           <div className="flex flex-col w-full items-start">
             <HeaderSection />
 
+            <div className="w-full bg-white h-[60px]" />
+
             <MainContentSection />
+
+            <div className="w-full bg-white h-[150px]" />
 
             <SaveCostSection />
 
-            <div className="w-full [background:linear-gradient(180deg,rgb(245,245,245)_0%,rgb(255,255,255)_100%)] py-[110px]">
+            <div className="w-full bg-white h-[150px]" />
+
+            {/* <div className="w-full [background:linear-gradient(180deg,rgb(245,245,245)_0%,rgb(255,255,255)_100%)] py-[110px]">
               <div className="max-w-[1345px] mx-auto text-center">
                 <h2 className="font-['Poppins',Helvetica] font-extrabold text-[#293147] text-[80px] leading-[80px]">
                   What is TWAMM
@@ -37,11 +43,11 @@ export const DesktopLightMode = (): JSX.Element => {
 
             <div className="w-full bg-[#0261f5] h-[100px] relative">
               <div className="h-[101px] w-full bg-[url(public/icon-6.svg)] bg-[100%_100%]" />
-            </div>
+            </div> */}
 
             <BenefitsSection />
 
-            <div className="w-full bg-[#0261f5] h-[100px] relative">
+            {/* <div className="w-full bg-[#0261f5] h-[100px] relative">
               <div className="relative h-[300px] mt-[101px] ml-auto">
                 <img
                   className="w-px h-[150px]"
@@ -49,12 +55,12 @@ export const DesktopLightMode = (): JSX.Element => {
                   src="public/icon.svg"
                 />
               </div>
-            </div>
+            </div> */}
 
             <SecurityAuditsSection />
 
             <div className="w-full bg-white py-[100px]">
-              <div className="max-w-[1140px] mx-auto">
+              <div className="w-full px-4">
                 <div className="text-center mb-[65px]">
                   <h2 className="font-['Poppins',Helvetica] font-semibold text-[#293147] text-[55px] leading-[55px]">
                     Security Audits

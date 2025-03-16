@@ -1,9 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { DesktopLightMode } from "./screens/DesktopLightMode";
+import { WebsiteLightMode } from "./screens/WebsiteLightMode";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
-    <DesktopLightMode />
+    <WebsiteLightMode />
   </StrictMode>,
 );

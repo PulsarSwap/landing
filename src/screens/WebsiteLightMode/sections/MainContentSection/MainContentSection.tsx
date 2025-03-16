@@ -7,7 +7,7 @@ export const MainContentSection = (): JSX.Element => {
     {
       id: 1,
       lines: ["Truly CPAMM-based", "TWAMM algorithm"],
-      width: "w-[253px]",
+      width: "w-[250px]",
     },
     {
       id: 2,
@@ -15,7 +15,7 @@ export const MainContentSection = (): JSX.Element => {
         "Lowering down slippage loss by",
         "enabling term swap for large orders",
       ],
-      width: "w-[429px]",
+      width: "w-[410px]",
     },
     {
       id: 3,
@@ -23,7 +23,7 @@ export const MainContentSection = (): JSX.Element => {
         "Arbitrary trading time configuration at",
         "the user's free will",
       ],
-      width: "w-[414px]",
+      width: "w-[400px]",
     },
   ];
 
@@ -36,7 +36,7 @@ export const MainContentSection = (): JSX.Element => {
         <div className="flex flex-col items-center py-36 px-4">
           <div className="max-w-[1100px] w-full">
             {/* Heading and subtitle */}
-            <div className="mb-32">
+            <div className="mb-10">
               <h1 className="font-['Poppins',Helvetica] font-extrabold text-white text-[94.4px] leading-[94.4px] whitespace-nowrap">
                 Pulsar Protocol
               </h1>
@@ -46,7 +46,7 @@ export const MainContentSection = (): JSX.Element => {
             </div>
 
             {/* Feature points */}
-            <div className="flex flex-wrap gap-x-4 mb-12">
+            <div className="flex flex-wrap gap-x-4 mb-10">
               {featurePoints.map((feature) => (
                 <div
                   key={feature.id}
@@ -72,13 +72,15 @@ export const MainContentSection = (): JSX.Element => {
             <div className="flex justify-center gap-5 mt-8">
               <Button
                 variant="outline"
-                className="w-[172px] h-[51px] rounded-[5px] border-[3px] border-solid border-white bg-transparent [text-shadow:0px_0px_10px_#0000004c] font-['Poppins',Helvetica] font-semibold text-white text-[15px]"
+                className="w-[172px] h-[51px] rounded-[5px] border-[3px] border-solid border-white bg-transparent [text-shadow:0px_0px_10px_#0000004c] font-['Poppins',Helvetica] font-semibold text-white text-[15px] hover:text-[#0261f5]"
+                onClick={() => window.open('https://app.pulsarswap.com', '_blank')}
               >
                 SWAP NOW
               </Button>
               <Button
                 variant="outline"
-                className="w-[168px] h-[51px] rounded-[5px] border-[3px] border-solid border-white bg-transparent [text-shadow:0px_0px_10px_#0000004c] font-['Poppins',Helvetica] font-semibold text-white text-[15px]"
+                className="w-[168px] h-[51px] rounded-[5px] border-[3px] border-solid border-white bg-transparent [text-shadow:0px_0px_10px_#0000004c] font-['Poppins',Helvetica] font-semibold text-white text-[15px] hover:text-[#0261f5]"
+                onClick={() => window.open('https://docs.pulsarswap.com', '_blank')}
               >
                 DOCUMENTATION
               </Button>

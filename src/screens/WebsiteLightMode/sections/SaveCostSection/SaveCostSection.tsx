@@ -19,7 +19,7 @@ export const SaveCostSection = (): JSX.Element => {
   ];
 
   return (
-    <Card className="w-full max-w-[1000px] mx-auto rounded-[20px] shadow-[0px_0px_10px_#00000080]">
+    <Card className="w-full max-w-[1000px] mx-auto rounded-[20px]">
       <CardContent className="flex justify-between items-center py-5">
         {metrics.map((metric, index) => (
           <div
