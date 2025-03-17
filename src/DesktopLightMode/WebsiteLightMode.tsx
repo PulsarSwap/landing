@@ -19,11 +19,11 @@ export const WebsiteLightMode = (): JSX.Element => {
 
             <MainContentSection />
 
-            <div className="w-full bg-white h-[150px]" />
+            <div className="w-full bg-white h-[110px]" />
 
             <SaveCostSection />
 
-            <div className="w-full bg-white h-[150px]" />
+            <div className="w-full bg-white h-[120px]" />
 
             {/* <div className="w-full [background:linear-gradient(180deg,rgb(245,245,245)_0%,rgb(255,255,255)_100%)] py-[110px]">
               <div className="max-w-[1345px] mx-auto text-center">
@@ -68,13 +68,29 @@ export const WebsiteLightMode = (): JSX.Element => {
                 </div>
 
                 <div className="flex justify-center">
-                  <div className="w-[250px] h-[270px] mr-[19px]">
+                  <div
+                    className="w-[250px] h-[270px] mr-[19px] cursor-pointer"
+                    onClick={() =>
+                      window.open(
+                        "https://github.com/PulsarSwap/TWAMM-Contracts/blob/master/audits/peckshield/Pulsar-PeckShield-Audit-Report.pdf",
+                        "_blank",
+                      )
+                    }
+                  >
                     <div className="h-60">
                       <div className="relative w-[170px] h-40 mt-10 ml-10 bg-[url(public/div--elementor-carousel-image--1.png)] bg-cover bg-[50%_50%]" />
                     </div>
                   </div>
 
-                  <div className="w-[212px] h-60">
+                  <div
+                    className="w-[212px] h-60 cursor-pointer"
+                    onClick={() =>
+                      window.open(
+                        "https://github.com/PulsarSwap/TWAMM-Contracts/blob/master/audits/secure3/Pulsar-Secure3-Audit-Report.pdf",
+                        "_blank",
+                      )
+                    }
+                  >
                     <div className="h-[210px]">
                       <div className="relative w-[132px] h-[130px] mt-10 ml-10 bg-[url(public/div--elementor-carousel-image-.png)] bg-cover bg-[50%_50%]" />
                     </div>

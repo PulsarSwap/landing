@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../../../../components/ui/button";
+import { Button } from "../../../components/ui/button";
 
 export const MainContentSection = (): JSX.Element => {
   // Feature points data for mapping
@@ -11,18 +11,12 @@ export const MainContentSection = (): JSX.Element => {
     },
     {
       id: 2,
-      lines: [
-        "Lowering down slippage loss by",
-        "enabling term swap for large orders",
-      ],
+      lines: ["Lowering down slippage loss by", "enabling term swap for large orders"],
       width: "w-[410px]",
     },
     {
       id: 3,
-      lines: [
-        "Arbitrary trading time configuration at",
-        "the user's free will",
-      ],
+      lines: ["Arbitrary trading time configuration at", "the user's free will"],
       width: "w-[400px]",
     },
   ];
@@ -46,12 +40,10 @@ export const MainContentSection = (): JSX.Element => {
             </div>
 
             {/* Feature points */}
+
             <div className="flex flex-wrap gap-x-4 mb-10">
               {featurePoints.map((feature) => (
-                <div
-                  key={feature.id}
-                  className={`${feature.width} opacity-95 mb-6`}
-                >
+                <div key={feature.id} className={`${feature.width} opacity-95 mb-6`}>
                   <div className="relative pl-6 border-l-[5px] border-white">
                     <div className="flex flex-col pl-4">
                       {feature.lines.map((line, index) => (
@@ -73,14 +65,14 @@ export const MainContentSection = (): JSX.Element => {
               <Button
                 variant="outline"
                 className="w-[172px] h-[51px] rounded-[5px] border-[3px] border-solid border-white bg-transparent [text-shadow:0px_0px_10px_#0000004c] font-['Poppins',Helvetica] font-semibold text-white text-[15px] hover:text-[#0261f5]"
-                onClick={() => window.open('https://app.pulsarswap.com', '_blank')}
+                onClick={() => window.open("https://app.pulsarswap.com", "_blank")}
               >
                 SWAP NOW
               </Button>
               <Button
                 variant="outline"
                 className="w-[168px] h-[51px] rounded-[5px] border-[3px] border-solid border-white bg-transparent [text-shadow:0px_0px_10px_#0000004c] font-['Poppins',Helvetica] font-semibold text-white text-[15px] hover:text-[#0261f5]"
-                onClick={() => window.open('https://docs.pulsarswap.com', '_blank')}
+                onClick={() => window.open("https://docs.pulsarswap.com", "_blank")}
               >
                 DOCUMENTATION
               </Button>
@@ -88,6 +80,7 @@ export const MainContentSection = (): JSX.Element => {
           </div>
         </div>
       </div>
+      <div className="w-full h-20 bg-[url(public/icon-8.svg)] bg-[100%_100%] rotate-180" />
     </div>
   );
 };

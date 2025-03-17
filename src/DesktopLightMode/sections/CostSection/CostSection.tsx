@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent } from "../../../../components/ui/card";
+import { Card, CardContent } from "../../../components/ui/card";
 
 export const CostSection = (): JSX.Element => {
   // Data for benefit statements
@@ -10,13 +10,8 @@ export const CostSection = (): JSX.Element => {
         <>
           <span className="font-extrabold text-[#293147]">Up to </span>
           <span className="font-bold text-[#293147]">50x</span>
-          <span className="font-extrabold text-[#293147]">
-            {" "}
-            slippage reduction with
-          </span>
-          <div className="font-extrabold text-[#293147] text-xl leading-6">
-            TWAMM
-          </div>
+          <span className="font-extrabold text-[#293147]"> slippage reduction with</span>
+          <div className="font-extrabold text-[#293147] text-xl leading-6">TWAMM</div>
         </>
       ),
     },
@@ -25,13 +20,8 @@ export const CostSection = (): JSX.Element => {
       text: (
         <>
           <span className="font-bold text-[#293147]">No</span>
-          <span className="font-extrabold text-[#293147]">
-            {" "}
-            extra cost compare to existing
-          </span>
-          <div className="font-extrabold text-[#293147] text-xl leading-6">
-            DEX&apos;s
-          </div>
+          <span className="font-extrabold text-[#293147]"> extra cost compare to existing</span>
+          <div className="font-extrabold text-[#293147] text-xl leading-6">DEX&apos;s</div>
         </>
       ),
     },
@@ -56,10 +46,7 @@ export const CostSection = (): JSX.Element => {
 
       <div className="w-[356px] space-y-[117px] pt-[238px]">
         {benefits.map((benefit) => (
-          <div
-            key={benefit.id}
-            className="flex flex-col w-full h-12 items-start"
-          >
+          <div key={benefit.id} className="flex flex-col w-full h-12 items-start">
             <div className="text-xl leading-6 [font-family:'Poppins',Helvetica]">
               {benefit.text}
             </div>

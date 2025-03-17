@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "../../../../components/ui/button";
+import { Button } from "../../../components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
-} from "../../../../components/ui/navigation-menu";
+} from "../../../components/ui/navigation-menu";
 
 export const HeaderSection = (): JSX.Element => {
   // Navigation menu items data
@@ -16,22 +16,18 @@ export const HeaderSection = (): JSX.Element => {
         { url: "https://github.com/pulsarswap", text: "GitHub" },
         { url: "https://docs.pulsarswap.com", text: "Docs" },
         { url: "https://www.paradigm.xyz/2021/07/twamm", text: "WhitePaper" },
-        { url: "https://hackmd.io/@luffy/SJxSsOH1Y", text: "Math" }
-      ]
+        { url: "https://hackmd.io/@luffy/SJxSsOH1Y", text: "Math" },
+      ],
     },
     {
       id: 2,
       label: "Forum",
-      links: [
-        { url: "https://metaforo.io/g/pulsar", text: "MetaForo" },
-      ]
+      links: [{ url: "https://metaforo.io/g/pulsar", text: "MetaForo" }],
     },
     {
       id: 3,
       label: "Blog",
-      links: [
-        { url: "https://mirror.xyz/pulsarswap.eth", text: "Mirror" },
-      ]
+      links: [{ url: "https://mirror.xyz/pulsarswap.eth", text: "Mirror" }],
     },
     {
       id: 4,
@@ -39,8 +35,8 @@ export const HeaderSection = (): JSX.Element => {
       links: [
         { url: "https://twitter.com/pulsarswap", text: "Twitter" },
         { url: "https://discord.gg/c7D5Su82f9", text: "Discord" },
-        { url: "https://t.me/PulsarSwap", text: "Telegram" }
-      ]
+        { url: "https://t.me/PulsarSwap", text: "Telegram" },
+      ],
     },
   ];
 
@@ -48,7 +44,10 @@ export const HeaderSection = (): JSX.Element => {
     <header className="w-full py-6">
       <div className="max-w-[1140px] mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="w-[46px] h-[46px] bg-[url(public/image--attachment-full-.png)] bg-cover bg-center" />
+        <div
+          className="w-[46px] h-[46px] bg-[url(public/image--attachment-full-.png)] bg-cover bg-center cursor-pointer"
+          onClick={() => (window.location.href = "/")}
+        />
 
         {/* Navigation */}
         <NavigationMenu className="flex-1 flex justify-end mr-4">
@@ -61,31 +60,35 @@ export const HeaderSection = (): JSX.Element => {
                     className="font-['Roboto',Helvetica] font-semibold text-[#293147] text-base focus:outline-none"
                     onMouseEnter={(e) => {
                       // 关闭其他打开的菜单
-                      const otherMenus = document.querySelectorAll('.dropdown-menu');
-                      otherMenus.forEach(menu => {
+                      const otherMenus = document.querySelectorAll(".dropdown-menu");
+                      otherMenus.forEach((menu) => {
                         if (menu !== e.currentTarget.nextElementSibling) {
-                          menu.classList.remove('show');
+                          menu.classList.remove("show");
                         }
                       });
                       // 显示当前菜单
                       const dropdownMenu = e.currentTarget.nextElementSibling;
-                      dropdownMenu?.classList.add('show');
+                      dropdownMenu?.classList.add("show");
                     }}
                     onMouseLeave={(e) => {
-                      // 延迟3秒后隐藏菜单
-                      setTimeout(() => {
-                        const dropdownMenu = e.currentTarget.nextElementSibling;
-                        if (dropdownMenu) {
-                          dropdownMenu.classList.remove('show');
-                        }
-                      }, 3000);
+                      // 获取当前菜单元素
+                      const dropdownMenu = e.currentTarget.nextElementSibling;
+                      // 获取父元素容器
+                      const container = e.currentTarget.parentElement;
+
+                      if (dropdownMenu && container) {
+                        // 创建定时器，当鼠标离开后延迟隐藏菜单
+                        const timer = setTimeout(() => {
+                          // 检查鼠标是否在容器内
+                          if (!container.matches(":hover")) {
+                            dropdownMenu.classList.remove("show");
+                          }
+                        }, 300);
+
+                        // 将定时器ID存储在DOM元素上，以便后续清除
+                        container.dataset.timerId = timer.toString();
+                      }
                     }}
-                    // onMouseOut={(e) => {
-                    //   const dropdownMenu = e.currentTarget.nextElementSibling;
-                    //   if (dropdownMenu) {
-                    //     dropdownMenu.classList.remove('show');
-                    //   }
-                    // }}
                   >
                     {item.label}
                   </button>
@@ -101,7 +104,7 @@ export const HeaderSection = (): JSX.Element => {
                           rel="noopener noreferrer"
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         >
-                          {link.text}
+                          <span className="font-['Poppins',Helvetica]">{link.text}</span>
                         </a>
                       ))}
                     </div>
@@ -123,7 +126,7 @@ export const HeaderSection = (): JSX.Element => {
         {/* Launch App Button */}
         <Button
           className="bg-[#0261f5] text-white font-['Roboto',Helvetica] font-semibold px-4 py-2.5 rounded-[5px] shadow-[0px_0px_10px_#00000080] hover:bg-white hover:text-[#0261f5] transition-colors duration-200"
-          onClick={() => window.open('https://app.pulsarswap.com', '_blank')}
+          onClick={() => window.open("https://app.pulsarswap.com", "_blank")}
         >
           Launch App
         </Button>

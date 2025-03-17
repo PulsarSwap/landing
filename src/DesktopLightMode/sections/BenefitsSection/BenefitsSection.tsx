@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, CardContent } from "../../../../components/ui/card";
-import { Separator } from "../../../../components/ui/separator";
+import { Card, CardContent } from "../../../components/ui/card";
+import { Separator } from "../../../components/ui/separator";
 
 export const BenefitsSection = (): JSX.Element => {
   // Data for benefit cards
@@ -8,9 +8,7 @@ export const BenefitsSection = (): JSX.Element => {
     {
       id: 1,
       title: "Institutional RWA",
-      icon: (
-        <div className="h-10 w-10 flex items-center justify-center text-[#293147] text-[40px]"></div>
-      ),
+      icon: <img className="w-12 h-12" alt="Icon" src="public/icon-12.svg" />,
       description: [
         "CPAMM-based TWAMM",
         "strategy helps institutional",
@@ -46,9 +44,7 @@ export const BenefitsSection = (): JSX.Element => {
     {
       id: 4,
       title: "MEV Resistant",
-      icon: (
-        <div className="h-10 w-10 flex items-center justify-center text-[#293147] text-[40px]"></div>
-      ),
+      icon: <img className="w-12 h-12" alt="Icon" src="public/icon-11.svg" />,
       description: [
         "Swaps occur between",
         "blocks and are only realized",
@@ -84,10 +80,10 @@ export const BenefitsSection = (): JSX.Element => {
                   className="rounded-[15px] shadow-[0px_0px_30px_#0000000d] overflow-hidden bg-white"
                 >
                   <CardContent className="p-0">
-                    <div className="relative p-12 pt-14">
-                      <div className="flex flex-col items-center mb-6">
-                        <div className="mb-14">{card.icon}</div>
-                        <h3 className="font-extrabold text-[#293147] text-xl leading-6 mb-9">
+                    <div className="relative p-8 pt-10">
+                      <div className="flex flex-col items-center mb-4">
+                        <div className="mb-8">{card.icon}</div>
+                        <h3 className="font-extrabold text-[#293147] text-xl leading-6">
                           {card.title}
                         </h3>
                       </div>
@@ -95,7 +91,7 @@ export const BenefitsSection = (): JSX.Element => {
                         {card.description.map((line, index) => (
                           <p
                             key={index}
-                            className="font-normal text-[#565d6e] text-base leading-[25.6px] mb-0"
+                            className="font-normal text-[#565d6e] text-base leading-[22px] mb-0"
                           >
                             {line}
                           </p>
