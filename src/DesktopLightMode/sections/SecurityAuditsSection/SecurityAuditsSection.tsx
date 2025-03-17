@@ -81,7 +81,7 @@ export const SecurityAuditsSection = (): JSX.Element => {
                 aria-label={`Visit ${partner.name}'s website`}
                 onClick={() => window.open(partner.link, "_blank")}
                 className="w-32 h-32 bg-cover bg-center mb-4 cursor-pointer hover:opacity-80 transition-opacity"
-                style={{ backgroundImage: `url(${partner.image})` }}
+                style={{ backgroundImage: `url(/${partner.image})` }}
               />
               <div className="text-center opacity-75">
                 <p className="font-['Roboto',Helvetica] font-semibold text-[#293147] text-[12.8px] leading-[25.6px]">
